@@ -1,0 +1,405 @@
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+.app {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.3s;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 1200px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.app-details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(75, 75, 75);
+    width: 100%;
+    padding: 0 3rem;
+}
+.app-details span {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.app-details input {
+    font-size: 1rem;
+    padding: 0.4rem;
+    color: rgb(75, 75, 75);
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.app-details textarea {
+    font-size: 1rem;
+    height: 10rem;
+    width: 30rem;
+    color: rgb(75, 75, 75);
+    border: 2px solid rgb(75, 75, 75);
+    padding: 0.8rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 1200px) {
+    .app-details textarea {
+        width: 15rem;
+        height: 5rem;
+    }
+}
+.image-cont input {
+    display: none;
+}
+
+.upload-label {
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    padding: 0.6rem 2rem;
+    background-color: #7455be6c;
+    border: 1px solid #7455be;
+    cursor: pointer;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.upload-label:hover {
+    filter: contrast(5);
+}
+
+@media screen and (max-width: 1200px) {
+    .image-cont {
+        display: flex;
+        flex-direction: column;
+    }
+    .upload-label {
+        margin: 0;
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.app-details select {
+    margin: 2rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    background-color: white;
+    outline: none;
+    width: auto;
+}
+
+.curr-serv {
+    display: flex;
+    width: fit-content;
+}
+
+.serv-item {
+    margin-right: 0.8rem;
+    display: flex;
+    padding: 0.6rem 1rem;
+    background-color: #7455be6c;
+    width: fit-content;
+    border-radius: 50px;
+    max-width: 920px;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+    .curr-serv {
+        flex-direction: column;
+    }
+    .serv-item {
+        margin-top: 1rem;
+    }
+}
+.service-cont {
+    margin-top: 2rem;
+}
+.del {
+    cursor: pointer;
+    padding: 0 6px;
+    text-align: right;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.del:hover {
+    background-color: #7455be6c;
+}
+.app-details option {
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+}
+.time-cont input {
+    font-size: 1.2rem;
+    width: 10rem;
+    margin-left: 2rem;
+}
+
+.time-btn {
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    background-color: #7455be6c;
+    color: rgb(50, 50, 50);
+    border-radius: 50px;
+    margin: 2rem 1rem;
+    border: 1px solid #7455be;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.time-btn:hover {
+    filter: contrast(5);
+}
+.time-slot {
+    display: flex;
+    max-width: 920px;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+    .time-cont {
+        display: flex;
+        flex-direction: column;
+    }
+    .time-btn {
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+.slot-item {
+    margin: 1rem 1rem;
+    display: flex;
+    padding: 0.6rem 1rem;
+    background-color: #7455be6c;
+    border-radius: 50px;
+}
+.slot-item p {
+    margin-left: 1rem;
+}
+.test-cont {
+    display: flex;
+    flex-direction: column;
+}
+.test-btn {
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    background-color: #7455be6c;
+    color: rgb(50, 50, 50);
+    border-radius: 50px;
+    margin: 2rem 0;
+    border: 1px solid #7455be;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: fit-content;
+}
+.test-btn:hover {
+    filter: contrast(5);
+}
+@media screen and (max-width: 1200px) {
+    .test-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+.preview-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: #7555be6c;
+    color: rgb(75, 75, 75);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    animation-name: btn-updown;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+
+.detail-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: white;
+    z-index: 22;
+    text-decoration: none;
+    background-color: #7555be6c;
+    color: rgb(75, 75, 75);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    animation-name: btn-updown;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+
+@keyframes btn-updown {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.app-preview {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    overflow-x: hidden !important;
+}
+
+
+.app-preview h1 {
+    font-size: 3rem;
+    color: #7555be;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    margin: 2rem 0;
+}
+.preview-img {
+    margin-top: 2rem;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+@media screen and (max-width : 1200px) {
+    .app-preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .preview-img {
+        position: relative;
+        right: 0;
+        top: 20px;
+    }
+}
+.app-preview p {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.preview-name {
+    width: fit-content;
+    color: rgb(100, 100, 100);
+    font-size: 2rem;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgb(100, 100, 100);
+}
+.preview-brief {
+    width: fit-content;
+    color: rgb(100, 100, 100);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    margin: 1rem 0;
+}
+.brief-show {
+    color: rgb(205, 205, 205);
+    font-size: 1.5rem;
+    height: fit-content;
+    overflow-wrap: break-word;
+}
+.edu {
+    width: fit-content;
+    color: rgb(100, 100, 100);
+    font-size: 2rem;
+    padding: 0.8rem 0;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    margin: 1rem 0;
+}
+.edu-show {
+    color: rgb(205, 205, 205);
+    height: fit-content;
+    overflow-wrap: break-word;
+}
+.services {
+    display: flex;
+    color: rgb(205, 205, 205);
+}
+.services p {
+    padding: 8px;
+    margin-right: 1rem;
+    border: 1px solid #7555be;
+    border-radius: 50px;
+    background-color: #7455be1c;
+}
+.avail p {
+    padding: 1rem;
+    border: 1px solid #7555be;
+    color: rgb(205, 205, 205);
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    background-color: #7455be1c;
+}
+.testimonial div {
+    margin: 1rem 0;
+    padding: 1rem;
+    color: rgb(205, 205, 205);
+    border: 1px solid #7455be;
+    background-color: #7455be1c;
+    border-radius: 50px;
+    font-size: 1.3rem;
+}
+.contact {
+    display: flex;
+    font-size: 2rem;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem;
+    color: white;
+    font-size: 1.3rem;
+    align-items: center;
+}
+@media screen and (max-width: 1200px) {
+    .contact {
+        flex-direction: column;
+    }
+    div.contact > * {
+        margin-bottom: 1rem;
+    }
+}
+.svg-icon {
+    cursor: pointer;
+    margin: 0 0.6rem 0 3rem;
+}
+.hide {
+    display: none;
+}
