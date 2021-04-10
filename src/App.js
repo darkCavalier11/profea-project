@@ -15,7 +15,7 @@ function App() {
     const [phone, setPhone] = useState("");
     const [whatsApp, setWhatsApp] = useState("");
     const [image, setImage] = useState(
-        "https://www.svgrepo.com/show/213882/avatar-user.svg"
+        "https://www.flaticon.com/svg/vstatic/svg/727/727399.svg?token=exp=1618040792~hmac=e72929db5b0ac26610dc808cd49ef166"
     );
 
     return (
@@ -205,8 +205,10 @@ function App() {
                             let testimonial = document.querySelector(
                                 ".test-text"
                             );
-                            setTest([...test, testimonial.value]);
-                            testimonial.value = "";
+                            if (testimonial.value) {
+                                setTest([...test, testimonial.value]);
+                                testimonial.value = "";
+                            }
                         }}
                     >
                         Add Testimonial
@@ -216,7 +218,7 @@ function App() {
 
             <div className="app-preview" id="app-preview">
                 <AvatarEditor
-                    className = "preview-img"
+                    className="preview-img"
                     image={image}
                     width={300}
                     height={300}

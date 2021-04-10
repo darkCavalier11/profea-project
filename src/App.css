@@ -28,17 +28,17 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
     }
 }
-
 .app-details {
     display: flex;
     flex-direction: column;
-    color: rgb(75, 75, 75);
+    color: black;
     width: 100%;
     padding: 0 3rem;
+    border-right: 1px solid rgb(100, 100, 100);
 }
 .app-details span {
     margin-top: 2rem;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.2rem;
 }
 .app-details input {
@@ -61,6 +61,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0.8rem;
     margin: 1rem 0;
     font-size: 1.2rem;
+    outline: none;
 }
 @media screen and (max-width: 1200px) {
     .app-details textarea {
@@ -79,7 +80,7 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #7455be;
     cursor: pointer;
     color: rgb(75, 75, 75);
-    font-weight: bold;
+    font-weight: lighter;
     border-radius: 50px;
 }
 
@@ -166,7 +167,7 @@ body::-webkit-scrollbar-thumb {
     margin: 2rem 1rem;
     border: 1px solid #7455be;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: lighter;
 }
 .time-btn:hover {
     filter: contrast(5);
@@ -211,7 +212,7 @@ body::-webkit-scrollbar-thumb {
     margin: 2rem 0;
     border: 1px solid #7455be;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: lighter;
     width: fit-content;
 }
 .test-btn:hover {
@@ -274,11 +275,12 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     padding: 0 3rem;
     width: 100%;
-    height: 100%;
+    min-height: 146vh;
     position: sticky;
     position: -webkit-sticky;
     overflow-x: hidden !important;
 }
+
 
 
 .app-preview h1 {
@@ -289,10 +291,8 @@ body::-webkit-scrollbar-thumb {
     margin: 2rem 0;
 }
 .preview-img {
-    margin-top: 2rem;
-    position: absolute;
-    right: 10px;
-    top: 100px;
+    position: relative;
+    transform: translateX(100%);
 }
 @media screen and (max-width : 1200px) {
     .app-preview {
@@ -304,6 +304,7 @@ body::-webkit-scrollbar-thumb {
         position: relative;
         right: 0;
         top: 20px;
+        transform: translateX(0);
     }
 }
 .app-preview p {
@@ -316,15 +317,16 @@ body::-webkit-scrollbar-thumb {
     color: rgb(100, 100, 100);
     font-size: 2rem;
     margin-top: 30px;
-    font-weight: bold;
+    font-weight: lighter;
     margin-bottom: 35px;
     border-bottom: 1px solid rgb(100, 100, 100);
 }
+
 .preview-brief {
     width: fit-content;
     color: rgb(100, 100, 100);
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: lighter;
     padding: 0.8rem 0;
     border-bottom: 1px solid rgb(100, 100, 100);
     margin: 1rem 0;
@@ -336,11 +338,13 @@ body::-webkit-scrollbar-thumb {
     overflow-wrap: break-word;
 }
 .edu {
-    width: fit-content;
     color: rgb(100, 100, 100);
     font-size: 2rem;
+    display: flex;
+    text-align: center;
+
     padding: 0.8rem 0;
-    font-weight: bold;
+    font-weight: lighter;
     border-bottom: 1px solid rgb(100, 100, 100);
     margin: 1rem 0;
 }
@@ -348,6 +352,11 @@ body::-webkit-scrollbar-thumb {
     color: rgb(205, 205, 205);
     height: fit-content;
     overflow-wrap: break-word;
+}
+@media screen and (max-width:1200px) {
+    .preview-name, .preview-brief, .edu {
+        font-size: 1.6rem;
+    }
 }
 .services {
     display: flex;
@@ -360,6 +369,15 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
     background-color: #7455be1c;
 }
+@media screen and (max-width:1200px) {
+    .services {
+        flex-direction: column;
+    }
+    .services p {
+        margin-top: 1rem;
+    }
+    
+}
 .avail p {
     padding: 1rem;
     border: 1px solid #7555be;
@@ -367,6 +385,11 @@ body::-webkit-scrollbar-thumb {
     margin-right: 2rem;
     margin-bottom: 1rem;
     background-color: #7455be1c;
+}
+@media screen and (max-width:1200px) {
+    .avail p {
+        margin: 0;
+    }
 }
 .testimonial div {
     margin: 1rem 0;
@@ -391,7 +414,12 @@ body::-webkit-scrollbar-thumb {
     .contact {
         flex-direction: column;
     }
+    .testimonial {
+        left: 0;
+        width: 100%;
+    }
     div.contact > * {
+        margin: 0;
         margin-bottom: 1rem;
     }
 }
